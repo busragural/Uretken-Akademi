@@ -1,0 +1,35 @@
+body{
+    background-color: #1e1e1e;
+   
+}
+
+.btn{
+    
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+    
+}
+.btn button{
+    background-color: lightcyan;
+    color: rgb(63, 63, 63);
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+}
+#number{
+    font-size: 45px;
+    text-align: center;
+    color: lightcyan;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+p{
+    border: 1px solid white;
+}
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+            
+        .calculator{
+            border: 3px solid #03045e;
+            width: 400px;
+            height: 300px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+    
+        }
+        .title{
+            border: 3px solid #03045e;
+            font-size: larger; 
+            font-weight: bold; 
+            font-family: Arial, Helvetica, sans-serif;
+            color: #03045e;
+
+        }
+        .display-box{
+            width: 100%;
+            height: 100%;
+        }
+        td{  
+            border: 3px solid #03045e;
+        }
+        input[type=button]{
+            
+            font-weight: bolder;
+            font-size: x-large;
+            width: 100%;
+            height: 100%;
+            background-color: #edf6f9;
+        }
+
+         input[type=button]:active{
+            background-color: #caf0f8;
+         }
+         input[value]{
+            color: #03045e;
+         }
+
+
+    </style>
+</head>
+<body>
+    
+    
+
+    <table class="calculator">
+        <caption class="title">HESAP MAKİNESİ</caption>
+        <tr>
+            <td colspan="3" > <input class="display-box" type="text" id="result" style="background-color:  #caf0f8"/></td>
+            <td><input type="button" value="C" onclick="clr()"/> </td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="1" onclick="display('1')"></td>
+            <td><input type="button" value="2" onclick="display('2')"> </td>
+            <td><input type="button" value="3" onclick="display('3')"></td>
+            <td style="width: 15%;"><input type="button" value="/" onclick="display('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="display('4')"> </td>
+            <td><input type="button" value="5" onclick="display('5')"> </td>
+            <td><input type="button" value="6" onclick="display('6')"> </td>
+            <td><input type="button" value="-" onclick="display('-')"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="display('7')"> </td>
+            <td><input type="button" value="8" onclick="display('8')"> </td>
+            <td><input type="button" value="9" onclick="display('9')"> </td>
+            <td><input type="button" value="+" onclick="display('+')"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="." onclick="display('.')"></td>
+            <td><input type="button" value="0" onclick="display('0')"></td>
+            <td><input type="button" value="=" onclick="calculate()"></td>
+            <td><input type="button" value="*" onclick="display('*')"></td>
+        </tr>
+    </table>
+
+    
+    <script>
+
+        function display(value) {
+            document.getElementById("result").value += value;
+        }
+
+        function calculate() {
+                    var a = document.getElementById("result").value;
+                    var b = eval(a);
+                    document.getElementById("result").value = b;
+
+        }
+
+        function clr() {
+            document.getElementById("result").value = "";
+        }
+
+    </script>
+
+</body>
+</html>
